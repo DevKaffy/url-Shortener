@@ -1,0 +1,18 @@
+.input-wrapper h1{
+@apply font-bold text-[3.5rem] self-center mb-4;
+}
+.input-container{
+  @apply flex items-start;
+}
+.input-container input{
+  @apply w-[100%] rounded-tl-[5px] rounded-bl-[5px] py-[5px] indent-4 outline-none;
+}
+.input-container input::placeholder{
+  @apply text-[0.9rem];
+}
+.button{
+  @apply rounded-tr-[5px] rounded-br-[5px] px-[1rem] py-[5px] bg-[#4e54c8] text-white cursor-pointer;
+}
+.button button{
+  @apply uppercase font-semibold;
+}

@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import BackgroundAnimate from './Components/BackgroundAnimate'
+import InputShortener from './Components/InputShortener'
+import LinkResult from './Components/LinkResult'
 import './App.css'
 
-function App() {
-
+const App = () => {
   return (
-    <div className="inputWrapper">
-      <h1>URL Shortener</h1>
-      <div>
-        <input type="text" placeholder='Paste a link to shorten it' />
-        <button>Shorten</button>
-      </div>
+    <div className="wrapper">
+      <InputShortener />
+      <BackgroundAnimate />
+      <LinkResult />
     </div>
-  )
+  );
 }
 
 export default App
