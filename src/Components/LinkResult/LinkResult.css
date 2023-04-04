@@ -1,0 +1,16 @@
+.result{
+    @apply flex items-center justify-center gap-x-4 mt-4;
+}
+.result p{
+    @apply outline;
+}
+
+.result button{
+    @apply bg-[#4e54c8] px-4 py-[0.5rem] text-white;
+}
+.result button.copied{
+    @apply bg-white text-[#4e54c8];
+}
+/* .no-data{
+    @apply text-white text-[1rem];
+} */

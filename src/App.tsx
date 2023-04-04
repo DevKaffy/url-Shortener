@@ -2,13 +2,15 @@ import BackgroundAnimate from './Components/BackgroundAnimate'
 import InputShortener from './Components/InputShortener'
 import LinkResult from './Components/LinkResult'
 import './App.css'
+import { useState } from 'react'
 
 const App = () => {
+  const [inputValue, setInputValue] = useState("")
   return (
     <div className="wrapper">
-      <InputShortener />
+      <InputShortener setInputValue = {setInputValue} />
       <BackgroundAnimate />
-      <LinkResult />
+      <LinkResult inputValue = {inputValue} />
     </div>
   );
 }
