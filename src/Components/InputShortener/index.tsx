@@ -31,7 +31,7 @@ const InputShortener = ({ setInputValue, handleFetchError }: { setInputValue: an
         </div>
       </div>
       {showError && (
-        <p className="ml-8 text-[0.7rem] text-red-700 mt-2">!Please, fill out this field.</p>
+        <p className="ml-8 text-[0.7rem] text-red-700 mt-2">Please, fill out this field.</p>
       )}
     </div>
   );
