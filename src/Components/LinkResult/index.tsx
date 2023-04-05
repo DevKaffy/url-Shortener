@@ -11,10 +11,10 @@ const LinkResult = ({inputValue}:{inputValue: any;}) => {
       try {
         setLoading(true);
         const res = await axios(
-          "https://api.shrtco.de/v2/shorten?url=${inputValue}");
+          `https://api.shrtco.de/v2/shorten?url=${inputValue}`);
           setShortenLink(res.data.result.full_short_link)
         } catch(err) {
-          setError(err)
+          setError(err);
         } finally {
           setLoading(false)
         }
@@ -30,7 +30,7 @@ const LinkResult = ({inputValue}:{inputValue: any;}) => {
           setCopied(false)
         }, 1000);
         return () => clearTimeout(timer)
-      }, [copied])
+      }, [copied]);
     if (loading){
       return <p className='no-data'>Loading...</p>
     }
