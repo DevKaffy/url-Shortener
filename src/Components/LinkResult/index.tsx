@@ -3,7 +3,6 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import './LinkResult.css'
 import axios from 'axios'
 const LinkResult = ({inputValue,error, setError}:{inputValue: any;error:boolean; setError:Function}) => {
-  
     const [shortenLink, setShortenLink] = useState("");
     const [copied, setCopied] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -50,7 +49,7 @@ const LinkResult = ({inputValue,error, setError}:{inputValue: any;error:boolean;
         text={shortenLink}
         onCopy={() => setCopied(true)}
         >
-        <button className={copied ? "copied" : ""}>Copy to clipboard</button>
+        <button className= {copied ? "copied" : ""}>Copy to clipboard</button>
         </CopyToClipboard>
         </div>
         )}

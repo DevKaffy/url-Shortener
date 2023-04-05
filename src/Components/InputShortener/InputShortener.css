@@ -2,17 +2,17 @@
 @apply font-bold lg:text-[3.5rem] self-center mb-4;
 }
 .input-container{
-  @apply flex flex-col gap-y-40 lg:flex-row items-start;
+  @apply flex flex-col gap-y-4 lg:flex-row items-start;
 }
 .input-container input{
-  @apply w-[100%] rounded-tl-[5px] rounded-bl-[5px] py-[5px] indent-4 outline-none;
+  @apply w-[100%] flex items-center justify-center justify-center:rounded-tl-[5px] lg:rounded-bl-[5px] lg:rounded-tr-none lg:rounded-br-none rounded py-[5px] indent-4 outline-none px-[0.5rem];
 }
 .input-container input::placeholder{
   @apply text-[0.9rem];
 }
 .button{
-  @apply rounded-tr-[5px] rounded-br-[5px] px-[1rem] py-[5px] bg-[#4e54c8] text-white cursor-pointer;
+  @apply lg:rounded-tr-[5px] lg:rounded-br-[5px] rounded lg:rounded-tl-none lg:rounded-bl-none px-[1rem] py-[5px] bg-[#4e54c8] text-white cursor-pointer w-full lg:w-auto flex items-center justify-center;
 }
 .button button{
-  @apply uppercase lg:text-[1rem] text-[0.7rem] font-semibold;
+  @apply uppercase lg:text-[1rem] text-[0.7rem] font-semibold ;
 }
