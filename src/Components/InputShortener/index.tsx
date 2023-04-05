@@ -17,9 +17,7 @@ const InputShortener = ({ setInputValue, handleFetchError }: { setInputValue: an
         <input
           type="text"
           placeholder="Paste a link to shorten it"
-          value={value} // const handleClick = () => {
-          //   setInputValue(null);
-          // }
+          value={value} 
           onChange={(e) => {
             handleFetchError();
             showError && setShowError(false);
