@@ -6,11 +6,15 @@ import { useState } from 'react'
 
 const App = () => {
   const [inputValue, setInputValue] = useState("")
+    const [error, setError] = useState(false);
+
   return (
     <div className="wrapper">
-      <InputShortener setInputValue = {setInputValue} />
+      <InputShortener  setInputValue = {setInputValue} handleFetchError={() => {
+        error && setError(false)
+      }} />
       <BackgroundAnimate />
-      <LinkResult inputValue = {inputValue} />
+      <LinkResult inputValue = {inputValue} error={error} setError={setError} />
     </div>
   );
 }

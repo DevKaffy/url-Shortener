@@ -2,18 +2,18 @@ import { useEffect, useState } from 'react'
 import CopyToClipboard from "react-copy-to-clipboard";
 import './LinkResult.css'
 import axios from 'axios'
-const LinkResult = ({inputValue}:{inputValue: any;}) => {
+const LinkResult = ({inputValue,error, setError}:{inputValue: any;error:boolean; setError:Function}) => {
+  
     const [shortenLink, setShortenLink] = useState("");
     const [copied, setCopied] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
     const fetchData = async () => {
       try {
         setLoading(true);
         const res = await axios(
           `https://api.shrtco.de/v2/shorten?url=${inputValue}`);
           setShortenLink(res.data.result.full_short_link)
-        } catch(err) {
+        } catch(err:any) {
           setError(err);
         } finally {
           setLoading(false)
@@ -25,17 +25,20 @@ const LinkResult = ({inputValue}:{inputValue: any;}) => {
           fetchData();
         }
       }, [inputValue]);
+
       useEffect(() => {
         const timer = setTimeout(() =>{
           setCopied(false)
         }, 1000);
         return () => clearTimeout(timer)
       }, [copied]);
+
+    
     if (loading){
       return <p className='no-data'>Loading...</p>
     }
     if (error) {
-      return <p className="no-data">Something went wrong</p>;
+      return <p className="lg:text-[1rem] text-[0.7rem]">Something went wrong</p>;
     }
     
       return (

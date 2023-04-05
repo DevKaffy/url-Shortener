@@ -1,8 +1,8 @@
 .input-wrapper h1{
-@apply font-bold text-[3.5rem] self-center mb-4;
+@apply font-bold lg:text-[3.5rem] self-center mb-4;
 }
 .input-container{
-  @apply flex items-start;
+  @apply flex flex-col gap-y-40 lg:flex-row items-start;
 }
 .input-container input{
   @apply w-[100%] rounded-tl-[5px] rounded-bl-[5px] py-[5px] indent-4 outline-none;
@@ -14,5 +14,5 @@
   @apply rounded-tr-[5px] rounded-br-[5px] px-[1rem] py-[5px] bg-[#4e54c8] text-white cursor-pointer;
 }
 .button button{
-  @apply uppercase font-semibold;
+  @apply uppercase lg:text-[1rem] text-[0.7rem] font-semibold;
 }
